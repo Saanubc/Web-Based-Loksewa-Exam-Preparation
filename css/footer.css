@@ -1,0 +1,33 @@
+/*footer Section*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    padding-block: 50px;
+
+    color: #03105f;
+}  
+
+.footer_container{
+max-width: 90%;
+margin: auto;
+}
+
+.footer_divider{
+    margin-block: 10px;
+     border-top: 1px solid #03105f;
+}
+
+
+
+.footer_bottom{
+gap: 10px;
+text-align: center;
+font-size: 1rem;
+
+}
+
+ 
