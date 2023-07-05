@@ -6,6 +6,10 @@ if(isset ($_SESSION['email'])){
 
 include 'connect.php';
 
+$protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
+$server_name = $_SERVER['SERVER_NAME'];
+$url = $protocol."://".$server_name."/loksewa/";
+
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
   
   $email = $_POST['email'];
@@ -65,7 +69,7 @@ function input ($data){
                                     <button class="btnn"><a href="home.php">Login</a></button>
 
                                     <p class="link">Don't have an account<br>
-                                    <a href="signup.php">Sign up </a> here</a></p>
+                                    <a href="<?php echo $url.'signup.php' ?>">Sign up </a> here</a></p>
 
                 </form> 
 

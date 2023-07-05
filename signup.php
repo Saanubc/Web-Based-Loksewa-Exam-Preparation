@@ -1,5 +1,9 @@
 <?php
+ 
 include 'connect.php'; // connect database
+$protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
+$server_name = $_SERVER['SERVER_NAME'];
+$url = $protocol."://".$server_name."/loksewa/";
 
 
 // define variables and set to empty values
@@ -91,6 +95,8 @@ function input($data){
    
 </head>
 
+
+
 <body>
         <div class="form">
                 <form action="index.php" method="post">
@@ -111,7 +117,7 @@ function input($data){
                                     <button class="btnn"><a href="index.php">Login</a></button>
 
                                     <p class="link">Already have an account?<br>
-                                    <a href="signin.php">Signin </a> here</a></p>
+                                    <a href="<?php echo $url.'signin.php' ?>">Signin </a> here</a></p>
 
                 </form> 
 

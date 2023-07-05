@@ -1,3 +1,11 @@
+<?php 
+$protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
+$server_name = $_SERVER['SERVER_NAME'];
+$url = $protocol."://".$server_name."/loksewa/";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +18,7 @@
     <?php include 'inc/navbar.php' ?>
     <section class="main">
       <div class="main-top">
-        <h1>EXAM HISTORY</h1>
+        <h1>Dashboard</h1>
         <i class="fas fa-user-cog"></i>
       </div>
       <div class="main-skills">
